@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Plant Watering Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Plant Watering System</h1>
+        <div class="gauges">
+            <div class="gauge-container">
+                <div id="gauge_temp" class="gauge"></div>
+                <p>Temperature (°C)</p>
+            </div>
+            <div class="gauge-container">
+                <div id="gauge_humid" class="gauge"></div>
+                <p>Humidity (%)</p>
+            </div>
+            <div class="gauge-container">
+                <div id="gauge_moisture" class="gauge"></div>
+                <p>Soil Moisture (%)</p>
+            </div>
+        </div>
+        <div class="data-box">
+            <p>PIR Status: <span id="pir">OFF</span></p>
+            <p>Water Pump: <span id="relay">OFF</span></p>
+            <p>Mode: <span id="manual">AUTO</span></p>
+        </div>
+        <div class="controls">
+            <button onclick="controlPump('ON')">Turn ON Pump</button>
+            <button onclick="controlPump('OFF')">Turn OFF Pump</button>
+            <button onclick="controlPump('MANUAL')">Manual Override</button>
+        </div>
+        <div class="status" id="status"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.4.0/justgage.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

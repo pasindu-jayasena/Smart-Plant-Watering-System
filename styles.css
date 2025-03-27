@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.gauges {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.gauge-container {
+    width: 200px;
+    margin: 10px;
+}
+
+.gauge {
+    width: 200px;
+    height: 160px;
+    margin: 0 auto;
+}
+
+.gauge-container p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.data-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.data-box p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.data-box span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+    min-width: 150px;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.controls button:nth-child(2) {
+    background-color: #dc3545;
+}
+
+.controls button:nth-child(2):hover {
+    background-color: #b02a37;
+}
+
+.controls button:nth-child(3) {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.controls button:nth-child(3):hover {
+    background-color: #e0a800;
+}
+
+.status {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none;
+}
+
+.status.success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .gauges {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .controls button {
+        width: 80%;
+    }
+}
